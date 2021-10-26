@@ -1,6 +1,6 @@
 # Google Books API App
 
-Backend: Node/Express
+Backend: Node/Express\
 Frontend: React
 
 ## Description
