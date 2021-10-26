@@ -7,5 +7,5 @@ Frontend: React (hosted on netlify)
 
 This app connects to the google books API and returns books based on the search input.
 
-* Interact with the App here -> https://jolly-dijkstra-d1674d.netlify.app
+* Interact with the App here -> https://nervous-swirles-d38459.netlify.app/
 * Check back for new features and updates!
