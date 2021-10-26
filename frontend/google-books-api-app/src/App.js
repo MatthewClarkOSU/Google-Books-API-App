@@ -6,6 +6,7 @@ import axios from 'axios';
 function App() {
 
   const [searchWord, setSearchWord] = useState(["universe"]);
+  const [tempSearchWord, setTempSearchWord] = useState()
   const [results, setResults] = useState([]);
   const [currentPage, setCurrentPage] = useState(1)
   const [nextPage, setNextPage] = useState()
@@ -13,11 +14,11 @@ function App() {
   const [itemsPerPage, setItemsPerPage] = useState(20)
 
   function handleChange(event) {
-    const searchWord = event.target.value;
-    setSearchWord(searchWord);
+    const tempSearchWord = event.target.value;
+    setTempSearchWord(tempSearchWord);
   }
 
-  function searchBooks() {
+  useEffect(() => {
     axios.get("https://Google-Books-API-App.matthewclarkosu.repl.co/volumeSearch", {
       params: {
         searchWord: searchWord,
@@ -30,16 +31,12 @@ function App() {
         setNextPage(data.data.hasNextPage)
         setPrevPage(data.data.hasPreviousPage)
       })
-  }
-
-  useEffect(() => {
-    searchBooks();
-  }, [currentPage])
+  }, [currentPage, searchWord])
 
 
   function handleSubmit(event) {
     event.preventDefault();
-    searchBooks();
+    setSearchWord(tempSearchWord)
   }
 
   function handlePreviousPage() {
