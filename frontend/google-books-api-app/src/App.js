@@ -12,6 +12,7 @@ function App() {
   const [nextPage, setNextPage] = useState()
   const [prevPage, setPrevPage] = useState()
   const [itemsPerPage, setItemsPerPage] = useState(20)
+  let selectedItemsPerPage
 
   useEffect(() => {
     axios.get("https://Google-Books-API-App.matthewclarkosu.repl.co/volumeSearch", {
@@ -26,7 +27,7 @@ function App() {
         setNextPage(data.data.hasNextPage)
         setPrevPage(data.data.hasPreviousPage)
       })
-  }, [currentPage, searchWord])
+  }, [currentPage, searchWord, itemsPerPage])
 
   function handleChange(event) {
     const tempSearchWord = event.target.value;
@@ -47,6 +48,11 @@ function App() {
   function handleNextPage() {
     nextPage ? setCurrentPage(page => page + 1) :
       setCurrentPage(page => page)
+  }
+
+  function handleItemsPerPageDropdown(event) {
+    selectedItemsPerPage = event.target.value
+    setItemsPerPage(selectedItemsPerPage)
   }
 
   return (
@@ -70,6 +76,16 @@ function App() {
             Search
                 </button>
         </form>
+        <div id="dropdown-container">
+          <select id="results-per-page-dropdown" className="btn btn-info dropdown-toggle" onChange={handleItemsPerPageDropdown}>
+            <option value="2">2 books per page</option>
+            <option value="4">4 books per page</option>
+            <option value="8">8 books per page</option>
+            <option value="10">10 books per page</option>
+            <option selected value="20">20 books per page</option>
+            <option value="40">40 books per page</option>
+          </select>
+        </div>
         <hr id="horizontal-rule" />
       </div>
       <div id="page-buttons">
