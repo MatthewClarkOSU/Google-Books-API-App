@@ -67,7 +67,7 @@ function App() {
               autoComplete="off"
               onChange={handleChange}
               className="input-control"
-              placeholder="Search for books!" />
+              placeholder="Input Search - i.e. 'Universe'" />
           </div>
           <button
             id="search-button"
