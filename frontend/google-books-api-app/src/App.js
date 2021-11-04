@@ -88,24 +88,7 @@ function App() {
         </div>
         <hr id="horizontal-rule" />
       </div>
-      <div id="page-buttons">
-        <a href="#horizontal-rule">
-          <button
-            id="previous-page"
-            onClick={handlePreviousPage}
-            className="btn btn-info text-white">
-            Previous
-              </button>
-        </a>
-        <a href="#horizontal-rule">
-          <button
-            id="next-page"
-            onClick={handleNextPage}
-            className="btn btn-info text-white">
-            Next
-              </button>
-        </a>
-      </div>
+
       <div className="card-container">
         {results.length > 0 ? results.map(result => (
           <a target="_blank" href={result.link}>
@@ -116,7 +99,7 @@ function App() {
               <div id="book-authors">{result.authors}</div>
               <div id="book-date">{result.publishedDate}</div>
               <div id="book-description">{result.description}</div>
-              <div id="description-click">... Click to learn more!</div>
+              <p>...</p>
             </div>
           </a>
         )) : <p>No results found</p>}
@@ -140,7 +123,9 @@ function App() {
         </a>
       </div>
       <hr />
-      <footer>Created by Matt Clark - 2021</footer>
+      <a href="https://www.linkedin.com/in/matt-clark-372756212/" target="_blank">
+      <footer>Matt Clark - 2021</footer>
+      </a>
     </div>
   );
 }
