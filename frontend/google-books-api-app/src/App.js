@@ -11,7 +11,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1)
   const [nextPage, setNextPage] = useState()
   const [prevPage, setPrevPage] = useState()
-  const [itemsPerPage, setItemsPerPage] = useState(20)
+  const [itemsPerPage, setItemsPerPage] = useState(8)
   let selectedItemsPerPage
 
   useEffect(() => {
@@ -80,9 +80,9 @@ function App() {
           <select id="results-per-page-dropdown" className="btn btn-info dropdown-toggle" onChange={handleItemsPerPageDropdown}>
             <option value="2">2 books per page</option>
             <option value="4">4 books per page</option>
-            <option value="8">8 books per page</option>
+            <option selected value="8">8 books per page</option>
             <option value="10">10 books per page</option>
-            <option selected value="20">20 books per page</option>
+            <option value="20">20 books per page</option>
             <option value="40">40 books per page</option>
           </select>
         </div>
@@ -123,6 +123,10 @@ function App() {
             Next
               </button>
         </a>
+      </div>
+
+      <div id="current-page-display">
+        Current Page: {currentPage}
       </div>
       <hr />
       <a href="https://www.linkedin.com/in/matt-clark-372756212/" target="_blank">
