@@ -50,6 +50,14 @@ function App() {
       setCurrentPage(page => page)
   }
 
+  function handleFirstPage() {
+    setCurrentPage(1)
+  }
+
+  function handleLastPage() {
+    setCurrentPage()
+  }
+
   function handleItemsPerPageDropdown(event) {
     selectedItemsPerPage = event.target.value
     setItemsPerPage(selectedItemsPerPage)
@@ -93,8 +101,8 @@ function App() {
         {results.length > 0 ? results.map(result => (
           <a target="_blank" href={result.link}>
             <div key={result.id} className="card">
-              <img src={result.image}
-                alt="book image failed to load" />
+              <img id="book-image" src={result.image ? result.image : "https://blog.hubspot.com/hubfs/Shrug-Emoji.jpg"}
+                alt="Book Cover" />
               <div id="book-title">{result.title}</div>
               <div id="book-authors">{result.authors}</div>
               <div id="book-date">{result.publishedDate}</div>
@@ -128,6 +136,28 @@ function App() {
       <div id="current-page-display">
         Current Page: {currentPage}
       </div>
+
+      <div id="first-last-page">
+        <a href="#horizontal-rule">
+          <button
+            id="first-page"
+            onClick={handleFirstPage}
+            disabled={!prevPage}
+            className="btn btn-info text-white">
+            First Page
+              </button>
+        </a>
+        <a href="#horizontal-rule">
+          <button
+            id="last-page"
+            onClick={handleLastPage}
+            disabled={!nextPage}
+            className="btn btn-info text-white">
+            Last Page
+              </button>
+        </a>
+      </div>
+      
       <hr />
       <a href="https://www.linkedin.com/in/matt-clark-372756212/" target="_blank">
       <footer>Matt Clark - 2021</footer>
