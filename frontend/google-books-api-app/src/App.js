@@ -109,6 +109,7 @@ function App() {
           <button
             id="previous-page"
             onClick={handlePreviousPage}
+            disabled={!prevPage}
             className="btn btn-info text-white">
             Previous
               </button>
@@ -117,6 +118,7 @@ function App() {
           <button
             id="next-page"
             onClick={handleNextPage}
+            disabled={!nextPage}
             className="btn btn-info text-white">
             Next
               </button>
