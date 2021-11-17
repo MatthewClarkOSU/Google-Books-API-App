@@ -101,7 +101,7 @@ function App() {
         {results.length > 0 ? results.map(result => (
           <a target="_blank" href={result.link}>
             <div key={result.id} className="card">
-              <img id="book-image" src={result.image ? result.image : "https://blog.hubspot.com/hubfs/Shrug-Emoji.jpg"}
+              <img id="book-image" src={result.image ? result.image : "https://icon-library.com/images/image-missing-icon/image-missing-icon-19.jpg"}
                 alt="Book Cover" />
               <div id="book-title">{result.title}</div>
               <div id="book-authors">{result.authors}</div>
