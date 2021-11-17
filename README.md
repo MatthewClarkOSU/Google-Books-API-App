@@ -7,5 +7,5 @@ Frontend: React (hosted on netlify)
 
 This app connects to the google books API and returns books based on the search input.
 
-* Interact with the App here -> https://romantic-joliot-aa9d9a.netlify.app
+* Interact with the App here -> https://wizardly-brown-c7c9c1.netlify.app
 * Check back for new features and updates!

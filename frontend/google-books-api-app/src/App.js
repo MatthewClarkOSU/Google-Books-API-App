@@ -162,7 +162,6 @@ function App() {
               </button>
         </a>
       </div>
-      
       <hr />
       <a href="https://www.linkedin.com/in/matt-clark-372756212/" target="_blank">
       <footer>Matt Clark - 2021</footer>
