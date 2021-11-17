@@ -13,7 +13,6 @@ function App() {
   const [prevPage, setPrevPage] = useState()
   const [totalItems, setTotalItems] = useState()
   const [itemsPerPage, setItemsPerPage] = useState(8)
-  let selectedItemsPerPage
 
   useEffect(() => {
     axios.get("https://Google-Books-API-App.matthewclarkosu.repl.co/volumeSearch", {
@@ -61,8 +60,7 @@ function App() {
   }
 
   function handleItemsPerPageDropdown(event) {
-    selectedItemsPerPage = event.target.value
-    setItemsPerPage(selectedItemsPerPage)
+      setItemsPerPage(event.target.value)
   }
 
   return (
