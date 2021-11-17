@@ -11,6 +11,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1)
   const [nextPage, setNextPage] = useState()
   const [prevPage, setPrevPage] = useState()
+  const [totalItems, setTotalItems] = useState()
   const [itemsPerPage, setItemsPerPage] = useState(8)
   let selectedItemsPerPage
 
@@ -26,6 +27,7 @@ function App() {
         setResults(data.data.items);
         setNextPage(data.data.hasNextPage)
         setPrevPage(data.data.hasPreviousPage)
+        setTotalItems(data.data.totalItems)
       })
   }, [currentPage, searchWord, itemsPerPage])
 
@@ -84,6 +86,11 @@ function App() {
             Search
                 </button>
         </form>
+
+        <div id="total-results-display">
+          Total Results: {totalItems}
+        </div>
+
         <div id="dropdown-container">
           <select id="results-per-page-dropdown" className="btn btn-info dropdown-toggle" onChange={handleItemsPerPageDropdown}>
             <option value="2">2 books per page</option>

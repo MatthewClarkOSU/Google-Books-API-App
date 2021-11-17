@@ -34,6 +34,12 @@ h1 {
   text-align: center;
 }
 
+#total-results-display {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
 #dropdown-container {
   margin: auto;
   width: 400px;
