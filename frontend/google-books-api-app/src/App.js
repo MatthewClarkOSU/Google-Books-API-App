@@ -57,7 +57,7 @@ function App() {
   }
 
   function handleLastPage() {
-    setCurrentPage()
+    setCurrentPage(Math.floor((totalItems / itemsPerPage) -1))
   }
 
   function handleItemsPerPageDropdown(event) {
