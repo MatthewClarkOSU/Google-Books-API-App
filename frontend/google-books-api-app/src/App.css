@@ -2,7 +2,7 @@
   font-family: roboto;
   margin-top: 20px;
   padding: 0px;
-  background-color: #F9FAFB;
+  background-color: white;
 }
 
 .search-container {
@@ -48,11 +48,17 @@ h1 {
 #results-per-page-dropdown {
   color: white;
   font-size: 25px;
+  margin-bottom: 20px;
+}
+
+hr {
+  margin: 0;
 }
 
 .card-container {
   text-align: center;
-  margin-top: 10px;
+  padding: 10px 0 10px 0;
+  background-color: #F9FAFB;
 }
 
 .card {
@@ -112,7 +118,7 @@ h1 {
 
 #previous-page, #next-page {
   width: 190px;
-  margin: 10px;
+  margin: 20px 10px 10px 10px;
   font-size: 25px;
   padding: 0px;
 }
@@ -137,7 +143,7 @@ h1 {
 
 footer {
   text-align: center;
-  margin-bottom: 20px;
+  margin: 10px 0 20px 0;
   font-family: Verdana;
   font-weight: bold;
 }

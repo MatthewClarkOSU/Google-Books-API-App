@@ -117,6 +117,7 @@ function App() {
           </a>
         )) : <p>No results found</p>}
       </div>
+      <hr />
       <div id="page-buttons">
         <a href="#horizontal-rule">
           <button
