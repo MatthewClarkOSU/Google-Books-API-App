@@ -13,8 +13,10 @@ function App() {
   const [prevPage, setPrevPage] = useState();
   const [totalItems, setTotalItems] = useState();
   const [itemsPerPage, setItemsPerPage] = useState(8);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     axios.get("https://Google-Books-API-App.matthewclarkosu.repl.co/volumeSearch", {
       params: {
         searchWord: searchWord,
@@ -22,7 +24,9 @@ function App() {
         itemsPerPage: itemsPerPage
       }
     })
+    
       .then(data => {
+        setLoading(false);
         setResults(data.data.items);
         setNextPage(data.data.hasNextPage)
         setPrevPage(data.data.hasPreviousPage)
@@ -103,19 +107,22 @@ function App() {
       </div>
 
       <div className="card-container">
-        {results.length > 0 ? results.map(result => (
-          <a target="_blank" href={result.link}>
-            <div key={result.id} className="card">
-              <img id="book-image" src={result.image ? result.image : "https://icon-library.com/images/image-missing-icon/image-missing-icon-19.jpg"}
-                alt="Book Cover" />
-              <div id="book-title">{result.title}</div>
-              <div id="book-authors">{result.authors}</div>
-              <div id="book-date">{result.publishedDate}</div>
-              <div id="book-description">{result.description}</div>
-              <p>...</p>
-            </div>
-          </a>
-        )) : <p>No results found</p>}
+        {loading ? <p>Loading...</p> : 
+          results.length > 0 ? results.map(result => (
+            <a target="_blank" href={result.link}>
+              <div key={result.id} className="card">
+                <img id="book-image" src={result.image ? result.image : "https://icon-library.com/images/image-missing-icon/image-missing-icon-19.jpg"}
+                  alt="Book Cover" />
+                <div id="book-title">{result.title}</div>
+                <div id="book-authors">{result.authors}</div>
+                <div id="book-date">{result.publishedDate}</div>
+                <div id="book-description">{result.description}</div>
+                <p>...</p>
+              </div>
+            </a>
+          )) : <p>No results found</p>
+        }
+        
       </div>
       <hr />
       <div id="page-buttons">
