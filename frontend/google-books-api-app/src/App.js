@@ -6,13 +6,13 @@ import axios from 'axios';
 function App() {
 
   const [searchWord, setSearchWord] = useState(["universe"]);
-  const [tempSearchWord, setTempSearchWord] = useState()
+  const [tempSearchWord, setTempSearchWord] = useState();
   const [results, setResults] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1)
-  const [nextPage, setNextPage] = useState()
-  const [prevPage, setPrevPage] = useState()
-  const [totalItems, setTotalItems] = useState()
-  const [itemsPerPage, setItemsPerPage] = useState(8)
+  const [currentPage, setCurrentPage] = useState(1);
+  const [nextPage, setNextPage] = useState();
+  const [prevPage, setPrevPage] = useState();
+  const [totalItems, setTotalItems] = useState();
+  const [itemsPerPage, setItemsPerPage] = useState(8);
 
   useEffect(() => {
     axios.get("https://Google-Books-API-App.matthewclarkosu.repl.co/volumeSearch", {
