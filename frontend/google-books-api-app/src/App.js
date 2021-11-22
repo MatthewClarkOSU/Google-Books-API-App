@@ -87,28 +87,34 @@ function App() {
             type="submit"
             className="btn btn-info text-white">
             Search
-                </button>
+          </button>
         </form>
 
-        <div id="total-results-display">
-          Total Results: {totalItems}
-        </div>
+        <div id="results-display">
+          <button 
+          id="total-results-display"
+            className="btn btn-info text-white">
+            Total Results: {totalItems}
+          </button>
 
-        <div id="dropdown-container">
-          <select id="results-per-page-dropdown" className="btn btn-info dropdown-toggle" onChange={handleItemsPerPageDropdown}>
-            <option value="2">2 books per page</option>
-            <option value="4">4 books per page</option>
-            <option selected value="8">8 books per page</option>
-            <option value="10">10 books per page</option>
-            <option value="20">20 books per page</option>
-            <option value="40">40 books per page</option>
-          </select>
-        </div>
+          <div id="dropdown-container">
+            <select id="results-per-page-dropdown" className="btn btn-info dropdown-toggle" onChange={handleItemsPerPageDropdown}>
+              <option value="2">2 books per page</option>
+              <option value="4">4 books per page</option>
+              <option selected value="8">8 books per page</option>
+              <option value="10">10 books per page</option>
+              <option value="20">20 books per page</option>
+              <option value="40">40 books per page</option>
+            </select>
+          </div>
+      </div>
+
         <hr id="horizontal-rule" />
       </div>
 
       <div className="card-container">
-        {loading ? <Spinner animation="border" variant="info" role="status">
+        {loading ? 
+        <Spinner animation="border" variant="info" role="status">
           <span className="visually-hidden">Loading...</span>
         </Spinner> :
           results.length > 0 ? results.map(result => (

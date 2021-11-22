@@ -13,19 +13,19 @@ h1 {
   text-align: center;
   margin-bottom: 5px;
   font-family: Verdana;
-  font-size: 33px;
+  font-size: 30px;
   font-weight: bold;
 }
 
 #search-box {
-  width: 400px;
+  width: 375px;
   height: 40px;
   padding: 0 0 0 10px;
 }
 
 #search-button {
   margin: 10px 0 10px 0;
-  width: 400px;
+  width: 375px;
   font-size: 25px;
   padding: 0px;
 }
@@ -34,21 +34,26 @@ h1 {
   text-align: center;
 }
 
-#total-results-display {
-  font-size: 25px;
-  font-weight: bold;
-  margin-bottom: 10px;
+#results-display {
+  display: flex;
+  margin: 0 auto 10px auto;
+  width: 375px;
 }
 
-#dropdown-container {
-  margin: auto;
-  width: 400px;
+#total-results-display {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  width: 200px;
+  height: 45px;
+  padding: 0px;
 }
 
 #results-per-page-dropdown {
   color: white;
   font-size: 25px;
-  margin-bottom: 20px;
+  margin-left: 15px;
+  width: 230px;
 }
 
 hr {
@@ -124,8 +129,8 @@ svg{
 }
 
 #previous-page, #next-page {
-  width: 190px;
-  margin: 20px 10px 10px 10px;
+  width: 175px;
+  margin: 10px 10px 0 10px;
   font-size: 25px;
   padding: 0px;
 }
@@ -138,12 +143,11 @@ svg{
 
 #first-last-page {
   text-align: center;
-  margin-bottom: 10px;
 }
 
 #first-page, #last-page {
-  width: 190px;
-  margin: 10px;
+  width: 175px;
+  margin: 0 10px 10px 10px;
   font-size: 25px;
   padding: 0px;
 }
