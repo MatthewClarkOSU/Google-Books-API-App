@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import './App.css'
 import axios from 'axios';
+import Spinner from 'react-bootstrap/Spinner'
 
 function App() {
 
@@ -107,7 +108,9 @@ function App() {
       </div>
 
       <div className="card-container">
-        {loading ? <p>Loading...</p> : 
+        {loading ? <Spinner animation="border" variant="info" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner> :
           results.length > 0 ? results.map(result => (
             <a target="_blank" href={result.link}>
               <div key={result.id} className="card">

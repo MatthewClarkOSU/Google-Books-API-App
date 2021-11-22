@@ -61,6 +61,13 @@ hr {
   background-color: #F9FAFB;
 }
 
+svg{
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  display:inline-block;
+}
+
 .card {
   width: 300px;
   height: 440px;
