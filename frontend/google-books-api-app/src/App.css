@@ -7,6 +7,7 @@
 
 .search-container {
   background-color: white;
+  text-align: center;
 }
 
 h1 {
@@ -28,10 +29,6 @@ h1 {
   width: 375px;
   font-size: 25px;
   padding: 0px;
-}
-
-.search-container {
-  text-align: center;
 }
 
 #results-display {
@@ -158,4 +155,28 @@ footer {
   margin: 10px 0 20px 0;
   font-family: Verdana;
   font-weight: bold;
+}
+
+/* Laptop/Desktop */
+@media screen and (min-width: 769px) {
+
+.search-container {
+background-color: white;
+display: inline-block;
+width: 100%;
+}
+
+#search-box {
+  width: 230px;
+  height: 40px;
+  padding: 0 0 0 10px;
+}
+
+#search-button {
+  margin: 10px 0 10px 0;
+  width: 80px;
+  font-size: 25px;
+  padding: 0px;
+}
+
 }

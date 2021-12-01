@@ -70,48 +70,46 @@ function App() {
 
   return (
     <div className="App">
-      <div className="search-container">
-        <h1>Google Books API App</h1>
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <input
-              id="search-box"
-              type="text"
-              autoComplete="off"
-              onChange={handleChange}
-              className="input-control"
-              placeholder="Input Search - i.e. 'Universe'" />
-          </div>
-          <button
-            id="search-button"
-            type="submit"
-            className="btn btn-info text-white">
-            Search
-          </button>
-        </form>
+      <h1>Google Books API App</h1>
+        <div className="search-container">        
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <input
+                id="search-box"
+                type="text"
+                autoComplete="off"
+                onChange={handleChange}
+                className="input-control"
+                placeholder="Input Search - i.e. 'Universe'" />
+            </div>
+            <button
+              id="search-button"
+              type="submit"
+              className="btn btn-info text-white">
+              Search
+            </button>
+          </form>
 
-        <div id="results-display">
-          <button 
-          id="total-results-display"
-            className="btn btn-info text-white">
-            Total Results: {totalItems}
-          </button>
+          <div id="results-display">
+            <button 
+            id="total-results-display"
+              className="btn btn-info text-white">
+              Total Results: {totalItems}
+            </button>
 
-          <div id="dropdown-container">
-            <select id="results-per-page-dropdown" className="btn btn-info dropdown-toggle" onChange={handleItemsPerPageDropdown}>
-              <option value="2">2 books per page</option>
-              <option value="4">4 books per page</option>
-              <option selected value="8">8 books per page</option>
-              <option value="10">10 books per page</option>
-              <option value="20">20 books per page</option>
-              <option value="40">40 books per page</option>
-            </select>
-          </div>
+            <div id="dropdown-container">
+              <select id="results-per-page-dropdown" className="btn btn-info dropdown-toggle" onChange={handleItemsPerPageDropdown}>
+                <option value="2">2 books per page</option>
+                <option value="4">4 books per page</option>
+                <option selected value="8">8 books per page</option>
+                <option value="10">10 books per page</option>
+                <option value="20">20 books per page</option>
+                <option value="40">40 books per page</option>
+              </select>
+            </div>
+        </div>
       </div>
-
-        <hr id="horizontal-rule" />
-      </div>
-
+      <hr id="horizontal-rule" />
       <div className="card-container">
         {loading ? 
         <Spinner animation="border" variant="info" role="status">
