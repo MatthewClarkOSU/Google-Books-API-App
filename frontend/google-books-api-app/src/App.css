@@ -162,7 +162,7 @@ footer {
 
 .search-container {
 background-color: white;
-display: inline-block;
+display: flex;
 width: 100%;
 }
 
@@ -172,11 +172,37 @@ width: 100%;
   padding: 0 0 0 10px;
 }
 
+.form-group {
+  display: inline-block;
+  margin: 0 auto 0 auto;
+}
+
 #search-button {
   margin: 10px 0 10px 0;
   width: 80px;
   font-size: 25px;
   padding: 0px;
+}
+
+#results-display {
+  width: 375px;
+}
+
+#total-results-display {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  width: 200px;
+  height: 45px;
+  padding: 0px;
+  line-height: 20px;
+}
+
+#results-per-page-dropdown {
+  color: white;
+  font-size: 25px;
+  margin-left: 15px;
+  width: 230px;
 }
 
 }
