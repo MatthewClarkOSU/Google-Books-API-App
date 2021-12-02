@@ -162,7 +162,9 @@ footer {
 
 .search-container {
 background-color: white;
-display: flex;
+display: inline-block;
+margin: 0 auto 0 auto;
+width: 100%;
 }
 
 #search-box {
@@ -173,7 +175,6 @@ display: flex;
 
 .form-group {
   display: inline-block;
-  margin-left: 200px;
 }
 
 #search-button {
@@ -184,15 +185,15 @@ display: flex;
 }
 
 #results-display {
-  width: 375px;
   margin: 10px 0 10px 10px;
+  display: flex;
 }
 
 #total-results-display {
   color: white;
   font-size: 16px;
   font-weight: bold;
-  width: 200px;
+  width: 120px;
   height: 45px;
   padding: 0px;
   line-height: 20px;
