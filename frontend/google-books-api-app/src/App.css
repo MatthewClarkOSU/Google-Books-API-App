@@ -174,11 +174,11 @@ width: 100%;
 
 .form-group {
   display: inline-block;
-  margin: 0 auto 0 auto;
+  
 }
 
 #search-button {
-  margin: 10px 0 10px 0;
+  margin: 10px 0 10px 10px;
   width: 80px;
   font-size: 25px;
   padding: 0px;

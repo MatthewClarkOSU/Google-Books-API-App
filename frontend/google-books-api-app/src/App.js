@@ -107,7 +107,7 @@ function App() {
                 <option value="40">40 books per page</option>
               </select>
             </div>
-        </div>
+          </div>
       </div>
       <hr id="horizontal-rule" />
       <div className="card-container">
