@@ -163,7 +163,6 @@ footer {
 .search-container {
 background-color: white;
 display: flex;
-width: 100%;
 }
 
 #search-box {
@@ -174,7 +173,7 @@ width: 100%;
 
 .form-group {
   display: inline-block;
-  
+  margin-left: 200px;
 }
 
 #search-button {
@@ -186,6 +185,7 @@ width: 100%;
 
 #results-display {
   width: 375px;
+  margin: 10px 0 10px 10px;
 }
 
 #total-results-display {
