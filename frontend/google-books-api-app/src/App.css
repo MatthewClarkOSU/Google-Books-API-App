@@ -162,7 +162,9 @@ footer {
 
 .search-container {
 background-color: white;
-display: inline-block;
+display: flex;
+justify-content: center;
+align-items: center;
 margin: 0 auto 0 auto;
 width: 100%;
 }
