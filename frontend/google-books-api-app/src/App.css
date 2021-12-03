@@ -170,8 +170,8 @@ width: 100%;
 }
 
 #search-box {
-  width: 230px;
-  height: 40px;
+  width: 250px;
+  height: 45px;
   padding: 0 0 0 10px;
 }
 
@@ -180,7 +180,8 @@ width: 100%;
 }
 
 #search-button {
-  margin: 10px 0 10px 10px;
+  margin: 10px 0 10px 0;
+  height: 45px;
   width: 80px;
   font-size: 25px;
   padding: 0px;
@@ -192,7 +193,7 @@ width: 100%;
 }
 
 #total-results-display {
-  color: white;
+  color: black;
   font-size: 16px;
   font-weight: bold;
   width: 120px;
@@ -204,7 +205,7 @@ width: 100%;
 #results-per-page-dropdown {
   color: white;
   font-size: 25px;
-  margin-left: 15px;
+  margin-left: 10px;
   width: 230px;
 }
 
